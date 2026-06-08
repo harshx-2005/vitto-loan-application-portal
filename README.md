@@ -10,6 +10,15 @@ Vitto is a modern full-stack multilingual Loan Application Portal built for a fi
 
 ---
 
+## 🔑 Evaluator Access (Admin Credentials)
+To test and evaluate the administrative operations dashboard (`/dashboard`), please use the following pre-configured credentials:
+*   **Email Address**: `admin@example.com`
+*   **Secret Key / Password**: `admin@vitto`
+
+*(Note: An "Autofill Credentials" helper button is also provided on the sign-in screen to populate these automatically).*
+
+---
+
 ## 🛠️ Technology Stack
 
 ### Frontend

@@ -4,7 +4,7 @@
 The **Vitto Loan Application Portal** is a production-grade full-stack application built to facilitate seamless borrower applications and streamline underwriting workflows. The project consists of two core components:
 
 *   **Borrower Application Form (`/`)**: A highly polished, responsive form supporting multilingual requests (Hindi, Tamil, Telugu, Marathi, English). It validates names, regional mobile formats, and loan ranges (Min ₹50,000 / Max ₹50 Lakh) client-side using React Hook Form + Zod, and registers them into the database. A unique transaction reference number (`VIT-YYYY-XXXXX`) is generated for each success.
-*   **Operations Portal (`/dashboard`)**: An internal administrative dashboard protected by credentials (`admin@example.com` / `admin@vitto`). It compiles real-time aggregate statistics (total volume, status breakdowns) and features a dynamic search and filter data grid for reviewing borrower purposes, language settings, and instantly approving/rejecting applications.
+*   **Operations Portal (`/dashboard`)**: An internal administrative dashboard protected by credentials (`admin@example.com` / `admin@vitto`) provided for evaluation and testing purposes (including a single-click "Autofill Credentials" shortcut button). It compiles real-time aggregate statistics (total volume, status breakdowns) and features a dynamic search and filter data grid for reviewing borrower purposes, language settings, and instantly approving/rejecting applications.
 
 ---
 
