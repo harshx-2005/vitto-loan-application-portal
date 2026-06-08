@@ -144,6 +144,7 @@ export const DashboardPage = () => {
             <div className="space-y-1 text-slate-600 font-medium">
               <div>Email: <code className="bg-blue-100/80 px-1 py-0.5 rounded font-mono text-[11px] text-slate-800 select-all">admin@example.com</code></div>
               <div>Secret Key: <code className="bg-blue-100/80 px-1 py-0.5 rounded font-mono text-[11px] text-slate-800 select-all">admin@vitto</code></div>
+              <div className="text-[10px] text-slate-400 mt-1.5 italic font-semibold">Note: Provided for evaluation and testing purposes.</div>
             </div>
             <button
               type="button"
