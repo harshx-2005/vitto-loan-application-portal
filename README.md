@@ -5,7 +5,7 @@ Vitto is a modern full-stack multilingual Loan Application Portal built for a fi
 ---
 
 ## ⚡ Live Deployments (Placeholders)
-- **Frontend Client**: [https://vitto-loanapp.vercel.app](https://vitto-loanapp.vercel.app)
+- **Frontend Client**: [https://vitto-loan-application-portal.vercel.app](https://vitto-loan-application-portal.vercel.app)
 - **Backend API Service**: [https://vitto-loan-application-portal.onrender.com](https://vitto-loan-application-portal.onrender.com)
 
 ---
