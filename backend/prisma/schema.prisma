@@ -1,0 +1,26 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Application {
+  id                   String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  applicationReference String   @unique @map("application_reference") @db.VarChar(50)
+  name                 String   @db.VarChar(255)
+  mobile               String   @db.VarChar(20)
+  amount               Decimal  @db.Decimal(12, 2)
+  purpose              String   @db.Text
+  language             String   @db.VarChar(50)
+  status               String   @default("pending") @db.VarChar(50)
+  createdAt            DateTime @default(now()) @map("created_at") @db.Timestamp
+  updatedAt            DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamp
+
+  @@map("applications")
+  @@index([status])
+  @@index([name])
+  @@index([mobile])
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: vitto-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npx prisma generate
+    startCommand: node src/server.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false # Paste your Supabase transaction connection string here
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        value: https://your-vercel-frontend.vercel.app # Replace with your actual Vercel domain after frontend deployment
