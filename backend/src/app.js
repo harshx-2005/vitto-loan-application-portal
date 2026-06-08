@@ -43,6 +43,17 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Root Welcome Endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to the Vitto Loan Portal API',
+    frontendUrl: process.env.FRONTEND_URL || 'https://vitto-loan-application-portal.vercel.app',
+    healthCheck: '/health',
+    status: 'operational',
+  });
+});
+
 // Health Check Endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({
