@@ -52,8 +52,9 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API Routes
+// API Routes - Mount under both '/api' and '/' to prevent 404 errors if frontend is configured without the '/api' suffix
 app.use('/api', apiRouter);
+app.use('/', apiRouter);
 
 // Catch-all 404 handler for undefined routes
 app.use((req, res, next) => {
