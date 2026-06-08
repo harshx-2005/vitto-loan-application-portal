@@ -1,4 +1,4 @@
-# Vitto | Multilingual Loan Application Portal
+# Vitto | Premium FinTech Loan Portal
 
 Vitto is a modern full-stack multilingual Loan Application Portal built for a fintech company. It consists of an interactive borrower submission form and an enterprise-grade operations dashboard for underwriting management.
 
