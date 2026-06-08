@@ -29,9 +29,9 @@ The **Vitto Loan Application Portal** is a production-grade full-stack applicati
 ---
 
 ## 5. Future Scope & Improvements
-If given more time, the following enhancements would be added:
-1.  **Regional SMS Notifications**: Integrate Twilio or a local SMS gateway to alert borrowers immediately in their selected language when their application is Approved or Rejected.
-2.  **KYC Document Parsing (OCR)**: Introduce an upload field for Aadhaar or PAN card documents and use OCR libraries (like Tesseract.js) to auto-fill the borrower name and verify legal identities.
-3.  **Role-Based Access Control (RBAC)**: Support multiple admin levels (e.g. Viewer, Risk Underwriter, Senior Approver) with granular permissions.
-4.  **Advanced Analytics Views**: Add interactive charts (Recharts) to show loan demand trends, distribution of loans by regional languages, and average processing times.
-5.  **Production-Grade Login & Registration**: Replace the pre-configured static credentials with a database-backed user authentication system, incorporating user registration tables, secure password hashing (using `bcrypt` salting), and session token management (signed JSON Web Tokens stored in secure `HttpOnly` cookies to protect against XSS).
+If given more time, the following enhancements would be added in a logical roadmap flow:
+1.  **Production-Grade Authentication & Registration**: Replace the pre-configured static credentials with a database-backed user authentication system, incorporating user registration tables, secure password hashing (using `bcrypt` salting), and session token management (signed JSON Web Tokens stored in secure `HttpOnly` cookies to protect against XSS).
+2.  **Role-Based Access Control (RBAC)**: Build on top of authentication by supporting multiple admin levels (e.g., Viewer, Risk Underwriter, Senior Approver) with granular permissions to control actions on the dashboard.
+3.  **KYC Document Parsing & Verification (OCR)**: Introduce upload fields for documents (Aadhaar or PAN cards) and use OCR libraries (like Tesseract.js) to verify legal identities and auto-fill borrower details to minimize input fraud.
+4.  **Regional SMS & Email Notifications**: Integrate an automated notification system (such as Twilio or local gateways) to alert borrowers in their preferred language (Hindi, Tamil, Telugu, Marathi, English) when their application state updates.
+5.  **Advanced Analytics & BI Dashboards**: Add interactive charts (using Recharts or Chart.js) to track loan demand trends, distribution of applications by regional languages, and underwriter processing efficiency.
