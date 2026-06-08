@@ -1,8 +1,6 @@
 const errorHandler = (err, req, res, next) => {
-  // Log error in non-production environments
-  if (process.env.NODE_ENV !== 'production') {
-    console.error(err);
-  }
+  // Always log the full error stack trace for cloud diagnostics
+  console.error('[Error Handler Trace]:', err);
 
   // Handle Zod Validation Errors
   if (err.name === 'ZodError' || (err.issues && Array.isArray(err.issues))) {
