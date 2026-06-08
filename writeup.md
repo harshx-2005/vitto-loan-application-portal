@@ -10,7 +10,7 @@ The **Vitto Loan Application Portal** is a production-grade full-stack applicati
 
 ## 2. Technical Stack & Architectural Choices
 *   **Frontend**: Built with **React** (orchestrated by **Vite** for fast HMR) and **Tailwind CSS** for styling. **TanStack Query (React Query)** handles server-state caching, enabling immediate client-side data synchronization and zero-reload updates when underwriters perform status transitions. **Lucide React** provides clean vector icons.
-*   **Backend**: A structured **Node.js** and **Express** API layer. It enforces security headers via **Helmet**, implements CORS policies, utilizes **Zod** request validation middleware to shield backend endpoints, and uses centralized JSON error parsing for robust crash safety.
+*   **Backend**: A structured **Node.js** and **Express** API layer. It enforces security headers via **Helmet**, implements CORS policies, utilizes **Zod** request validation middleware to shield backend endpoints, and uses centralized JSON error parsing for robust crash safety. **It implements a pre-configured credentials verification route and a custom route-gate middleware (`authMiddleware.js`) to restrict access to administrative endpoints.**
 *   **Database & ORM**: **PostgreSQL** configured with **Prisma ORM**. Prisma handles database schemas and indexes on search-intensive columns (mobile, status, name) to ensure quick query executions.
 
 ---
@@ -34,3 +34,4 @@ If given more time, the following enhancements would be added:
 2.  **KYC Document Parsing (OCR)**: Introduce an upload field for Aadhaar or PAN card documents and use OCR libraries (like Tesseract.js) to auto-fill the borrower name and verify legal identities.
 3.  **Role-Based Access Control (RBAC)**: Support multiple admin levels (e.g. Viewer, Risk Underwriter, Senior Approver) with granular permissions.
 4.  **Advanced Analytics Views**: Add interactive charts (Recharts) to show loan demand trends, distribution of loans by regional languages, and average processing times.
+5.  **Production-Grade Login & Registration**: Replace the pre-configured static credentials with a database-backed user authentication system, incorporating user registration tables, secure password hashing (using `bcrypt` salting), and session token management (signed JSON Web Tokens stored in secure `HttpOnly` cookies to protect against XSS).
